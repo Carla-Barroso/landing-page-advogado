@@ -187,8 +187,8 @@ Também testamos envios inválidos e campos vazios
 para validar a captura de erro e sucesso no JavaScript.
 
 ## Links
-- **Link do repositório:** [Insira o link do seu GitHub aqui]
-- **Link do site publicado:** [Insira o link do GitHub Pages aqui]
+- **Link do repositório:** https://github.com/Carla-Barroso/landing-page-advogado
+- **Link do site publicado:** https://carla-barroso.github.io/landing-page-advogado/
 
 
 ## Contribuição dos integrantes
