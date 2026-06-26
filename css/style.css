@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .font-serif {
-    font-family: 'Arial', serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .tracking-widest { letter-spacing: 0.15em; }
@@ -50,7 +50,9 @@ a {
 
 a:hover, a:focus { 
     color: var(--branco); 
-    outline: none;
+    outline: 2px solid var(--dourado);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 
@@ -218,7 +220,8 @@ section {
 
 .faq-pergunta:hover, .faq-pergunta:focus {
     background-color: rgba(255, 255, 255, 0.02);
-    outline: none;
+    outline: 2px solid var(--dourado);
+    outline-offset: -2px;
 }
 
 .faq-resposta {
@@ -237,8 +240,12 @@ section {
 }
 
 
+.footer-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
 .footer-custom {
-    background-color: var(--azul-escuro);
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5); 
     padding-top: 80px;    
     padding-bottom: 30px; 
