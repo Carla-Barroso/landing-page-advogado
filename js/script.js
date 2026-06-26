@@ -24,12 +24,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        if (!form.checkValidity()) {
-            confirmacao.textContent = 'Por favor, preencha todos os campos corretamente.';
+
+        const campos = form.querySelectorAll('[required]');
+        let primeiroCampoInvalido = null;
+
+        campos.forEach(function (campo) {
+            campo.removeAttribute('aria-invalid');
+            campo.style.borderColor = '';
+        });
+
+        campos.forEach(function (campo) {
+            if (!campo.checkValidity()) {
+                campo.setAttribute('aria-invalid', 'true');
+                campo.style.borderColor = '#ef4444';
+                if (!primeiroCampoInvalido) {
+                    primeiroCampoInvalido = campo;
+                }
+            }
+        });
+
+        if (primeiroCampoInvalido) {
+            const label = form.querySelector('label[for="' + primeiroCampoInvalido.id + '"]');
+            const nomeCampo = label ? label.textContent : 'campo';
+            confirmacao.textContent = 'Por favor, preencha o campo "' + nomeCampo + '" corretamente.';
             confirmacao.style.color = '#ef4444';
-            
+            primeiroCampoInvalido.focus();
+
             setTimeout(function () {
                 confirmacao.textContent = '';
+                campos.forEach(function (campo) {
+                    campo.removeAttribute('aria-invalid');
+                    campo.style.borderColor = '';
+                });
             }, 5000);
             return;
         }
