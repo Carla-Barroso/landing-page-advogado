@@ -2,8 +2,8 @@
 # Landing Page Profissional para Advogado
 
 
-## Integrantes da dupla
-- Carla Araújo Barroso
+## Desenvolvido por 
+- Carla Barroso
 
 ## Descrição do caso escolhido
 Este projeto consiste no desenvolvimento de uma landing page para Állefi Henrri,
